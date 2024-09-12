@@ -16,6 +16,9 @@ const guestMenu = (
 const userMenu = (
     <>
         <li className="nav-item">
+            <Link className="nav-link" to="/dashboard">{ } Dashboard</Link>
+        </li>
+        <li className="nav-item">
             <Link className="nav-link" to="/profile">{ } Profile</Link>
         </li>
         <li className="nav-item">
@@ -40,12 +43,13 @@ const adminMenu = (
             <Link className="nav-link" to="/admin/posts">Manage Posts</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link" to="/admin/logout">Logout</Link>
+            <Link className="nav-link" to="/logout">Logout</Link>
         </li>
     </>
 )
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
@@ -65,7 +69,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Home</Link>
                         </li>
-                        {guestMenu}
+                        {!user && guestMenu}
+                        {user && user.role === 'user' && userMenu}
+                        {user && user.role === 'admin' && adminMenu}
                     </ul>
                 </div>
             </div>

@@ -1,10 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLoaderData, useRevalidator } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 const LayoutWrapper = () => {
+
+    const user = useLoaderData();
+
     return (
         <>
-            <Navbar />
+            <Navbar
+                user={user}
+            />
             <div className="container">
                 <Outlet />
             </div>

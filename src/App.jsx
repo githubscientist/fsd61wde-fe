@@ -10,10 +10,14 @@ import AdminWrapper from "./wrappers/AdminWrapper"
 import AdminDashboardPage from "./pages/AdminDashboardPage"
 import ManageUsersPage from "./pages/ManageUsersPage"
 import ManagePostsPage from "./pages/ManagePostsPage"
+import authLoader from "./loaders/units/authLoader"
+import Logout from "./components/Logout"
+import Dashboard from "./pages/Dashboard"
 
 const router = createBrowserRouter([
   {
     element: <LayoutWrapper />,
+    loader: authLoader,
     children: [
       {
         path: "/",
@@ -28,8 +32,17 @@ const router = createBrowserRouter([
         element: <LoginPage />
       },
       {
+        path: "/logout",
+        element: <Logout />
+      },
+      {
         element: <AuthWrapper />,
+        loader: authLoader,
         children: [
+          {
+            path: "/dashboard",
+            element: <Dashboard />
+          },
           {
             path: "/profile",
             element: <ProfilePage />
@@ -42,6 +55,7 @@ const router = createBrowserRouter([
       },
       {
         element: <AdminWrapper />,
+        loader: authLoader,
         children: [
           {
             path: "/admin/dashboard",

@@ -27,7 +27,8 @@ const LoginPage = () => {
 
                 // Redirect to the dashboard page
                 setTimeout(() => {
-                    navigate("/dashboard");
+                    navigate("/");
+                    window.location.reload();
                 }, 500);
             })
             .catch((error) => {
