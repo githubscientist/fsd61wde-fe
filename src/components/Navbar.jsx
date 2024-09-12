@@ -65,7 +65,7 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Home</Link>
                         </li>
-                        { }
+                        {guestMenu}
                     </ul>
                 </div>
             </div>
