@@ -13,6 +13,9 @@ import ManagePostsPage from "./pages/ManagePostsPage"
 import authLoader from "./loaders/units/authLoader"
 import Logout from "./components/Logout"
 import Dashboard from "./pages/Dashboard"
+import Posts from "./pages/Posts"
+import Feed from "./pages/Feed"
+import postsLoader from "./loaders/units/postsLoader"
 
 const router = createBrowserRouter([
   {
@@ -44,13 +47,22 @@ const router = createBrowserRouter([
             element: <Dashboard />
           },
           {
-            path: "/profile",
-            element: <ProfilePage />
+            path: "/feed",
+            element: <Feed />,
+            loader: postsLoader
+          },
+          {
+            path: "/posts",
+            element: <Posts />
           },
           {
             path: "/createPost",
             element: <CreatePostPage />
-          }
+          },
+          {
+            path: "/profile",
+            element: <ProfilePage />
+          },
         ]
       },
       {

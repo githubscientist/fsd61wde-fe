@@ -19,10 +19,16 @@ const userMenu = (
             <Link className="nav-link" to="/dashboard">{ } Dashboard</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link" to="/profile">{ } Profile</Link>
+            <Link className="nav-link" to="/feed">Feed</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to="/posts">Posts</Link>
         </li>
         <li className="nav-item">
             <Link className="nav-link" to="/createPost">Create Post</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to="/profile">{  } Profile</Link>
         </li>
         <li className="nav-item">
             <Link className="nav-link" to="/logout">Logout</Link>
