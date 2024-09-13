@@ -33,7 +33,7 @@ const ProfilePage = () => {
                 <div className="col-8">
                     <div className="form-group">
                         <img
-                            src={user.profilePicture ? 'http://localhost:3001/' + user.profilePicture : 'https://www.gravatar.com/avatar/' + user.email + '?s=200'}
+                            src={user.profilePicture ? 'https://fsd61wde-be.onrender.com/' + user.profilePicture : 'https://www.gravatar.com/avatar/' + user.email + '?s=200'}
                             alt="Profile"
                         />
                         <input
