@@ -3,6 +3,7 @@ import { selectDescription, setDescription } from "../redux/features/post/postSl
 import postServices from "../services/postServices";
 import { useNavigate } from "react-router-dom";
 
+
 const CreatePostPage = () => {
 
     const description = useSelector(selectDescription);

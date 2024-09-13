@@ -16,6 +16,7 @@ import Dashboard from "./pages/Dashboard"
 import Posts from "./pages/Posts"
 import Feed from "./pages/Feed"
 import postsLoader from "./loaders/units/postsLoader"
+import feedLoader from "./loaders/combined/feedLoader"
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
           {
             path: "/feed",
             element: <Feed />,
-            loader: postsLoader
+            loader: feedLoader
           },
           {
             path: "/posts",
