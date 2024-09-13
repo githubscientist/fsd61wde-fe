@@ -45,7 +45,8 @@ const router = createBrowserRouter([
         children: [
           {
             path: "/dashboard",
-            element: <Dashboard />
+            element: <Dashboard />,
+            loader: feedLoader
           },
           {
             path: "/feed",
@@ -63,7 +64,8 @@ const router = createBrowserRouter([
           },
           {
             path: "/profile",
-            element: <ProfilePage />
+            element: <ProfilePage />,
+            loader: authLoader
           },
         ]
       },
