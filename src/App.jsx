@@ -54,7 +54,8 @@ const router = createBrowserRouter([
           },
           {
             path: "/posts",
-            element: <Posts />
+            element: <Posts />,
+            loader: feedLoader
           },
           {
             path: "/createPost",
